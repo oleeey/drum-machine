@@ -1,0 +1,150 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --color1: #e2c3c3;
+    --color2: #f7dfe9;
+    --font1: #1d3c3c;
+    --border: #C72768;
+}
+
+html {
+    overflow: hidden;
+}
+
+body {
+    position: relative;
+    height: 400px;
+    height: 100vh;
+    background-color: var(--color1);
+}
+
+#drum-machine {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 600px;
+    height: 300px;
+    border: 4px solid #C72768;
+    background-color: var(--color2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#padWrapper {
+    height: 100%;
+    width: 50%;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    justify-items: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.padItem {
+    border: 1px solid black;
+    width: 70px;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    box-shadow: 2px 2px;
+    font-weight: bold;
+    font-size: 1.2rem;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-color: var(--color1);
+    color: var(--font1);
+}
+
+
+.padItem:hover {
+    cursor: pointer;
+}
+
+.padItem:active, .padItem.active {
+    background-color: var(--border);
+}
+
+.select {
+    width: 50px;
+    height: 20px;
+    background-color: black;
+    margin: auto;
+    border: 3px solid black;
+}
+
+.controlWrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#display {
+    width: 200px;
+    height: 40px;
+    background-color: var(--color1);
+    margin-top: 10px;
+    border: 1px solid black;
+}
+
+#displaySound {
+    text-align: center;
+    position: relative;
+    top: 25%;
+    font-weight: bold;
+    color: var(--font1);
+}
+
+#selectWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2px;
+}
+
+.inner {
+    width: 50%;
+    height: 100%;
+    position: relative;
+    cursor: pointer;
+}
+
+.right {
+    float: right;
+    background-color: var(--border);
+}
+
+.left {
+    float: left;
+    background-color: lightblue;
+}
+
+.slider {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100%;
+    height: 10px;
+    background-color: var(--color1);
+    outline: none;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+    margin-top: 20px;
+}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 7px; 
+    height: 30px;
+    background: var(--border);
+    cursor: pointer; /* Cursor on hover */
+}
+
